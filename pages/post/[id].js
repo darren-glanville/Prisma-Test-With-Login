@@ -1,5 +1,6 @@
 import { Box, Button, Link, Text, VStack } from "@chakra-ui/react";
 import Header from "../../components/Header";
+import SubHeader from "../../components/SubHeader";
 
 import prisma from "../../lib/prisma";
 
@@ -8,10 +9,10 @@ export default function Post(props) {
 
     return (
         <VStack spacing={8}>
-            <Header>{props.title}</Header>
+            <SubHeader>{props.title}</SubHeader>
 
             <Link href="/" style={{ textDecoration: "none" }}>
-                <Button colorScheme="blue">Back</Button>
+                <Button colorScheme="green">Back</Button>
             </Link>
 
             <small>By {authorName}</small>

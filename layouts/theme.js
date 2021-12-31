@@ -7,7 +7,7 @@ const theme = extendTheme({
     },
 
     shadows: {
-        outline: "0 0 0 3px var(--chakra-colors-blue-700)",
+        outline: "0 0 0 3px var(--chakra-colors-green-700)",
     },
 });
 
