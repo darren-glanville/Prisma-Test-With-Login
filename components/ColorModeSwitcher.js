@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { FaMoon } from "react-icons/fa";
 
-export const ColorModeSwitcher = (props) => {
+const ColorModeSwitcher = (props) => {
     const { colorMode, toggleColorMode } = useColorMode();
 
     const CustomCard = React.forwardRef(({ children, ...rest }, ref) => (
@@ -34,7 +34,7 @@ export const ColorModeSwitcher = (props) => {
             <Box>
                 <Switch
                     id="change-theme"
-                    colorScheme="purple"
+                    colorScheme="green"
                     onChange={toggleColorMode}
                     isChecked={colorMode === "dark" ? true : false}
                 />
@@ -42,3 +42,5 @@ export const ColorModeSwitcher = (props) => {
         </Flex>
     );
 };
+
+export default ColorModeSwitcher;

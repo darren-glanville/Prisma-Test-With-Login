@@ -16,7 +16,7 @@ export default function Post(props) {
             </Link>
 
             <small>By {authorName}</small>
-            <Box background="gray.100" borderRadius="lg" p={4} w="100%">
+            <Box borderWidth="1px" borderRadius="lg" p={4} w="100%">
                 <Text>{props.content}</Text>
             </Box>
         </VStack>
