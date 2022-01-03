@@ -36,6 +36,7 @@ Updated on 3rd January 2022
 -   [ ] Edit post (content and public status)
 -   [ ] Delete post
 -   [ ] Add My Posts to User Menu (show in table)
+-   [ ] Add pagination to Homepage
 
 **Hosting**
 
