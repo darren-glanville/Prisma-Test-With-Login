@@ -8,11 +8,11 @@ datasource db {
 }
 
 model Post {
-  id        Int     @default(autoincrement()) @id
+  id        Int             @default(autoincrement()) @id
   title     String
   content   String?
-  published Boolean @default(false)
-  author    User?   @relation(fields: [authorId], references: [id])
+  published Boolean         @default(false)
+  author    User?           @relation(fields: [authorId], references: [id], onDelete: Cascade)
   authorId  Int?
 }
 
@@ -40,22 +40,22 @@ enum UserRole {
 
 
 model Account {
-  id                    String  @id @default(cuid())
+  id                    String      @id @default(cuid())
   userId                Int
   type                  String
   provider              String
   providerAccountId     String
-  refresh_token         String?  @db.Text
-  access_token          String?  @db.Text
+  refresh_token         String?     @db.Text
+  access_token          String?     @db.Text
   expires_at            Int?
   token_type            String?
   scope                 String?
-  id_token              String?  @db.Text
+  id_token              String?     @db.Text
   session_state         String?
   oauth_token_secret    String?
   oauth_token           String?
 
-  user                  User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user                  User        @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
 }

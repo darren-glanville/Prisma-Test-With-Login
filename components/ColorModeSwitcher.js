@@ -34,7 +34,7 @@ const ColorModeSwitcher = (props) => {
             <Box>
                 <Switch
                     id="change-theme"
-                    colorScheme="green"
+                    colorScheme="blue"
                     onChange={toggleColorMode}
                     isChecked={colorMode === "dark" ? true : false}
                 />

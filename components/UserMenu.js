@@ -22,7 +22,7 @@ const UserMenu = (props) => {
     if (!session) {
         return (
             <Link href="/api/auth/signin" style={{ textDecoration: "none" }}>
-                <Button colorScheme="green" variant="outline">
+                <Button colorScheme="blue" variant="outline">
                     Login
                 </Button>
             </Link>
@@ -32,7 +32,7 @@ const UserMenu = (props) => {
             <Menu autoSelect={false}>
                 <MenuButton
                     as={Button}
-                    colorScheme="green"
+                    colorScheme="blue"
                     variant="outline"
                     rightIcon={<ChevronDownIcon />}
                 >

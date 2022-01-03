@@ -11,6 +11,7 @@ const SubHeader = ({ props, children }) => {
             lineHeight={"110%"}
             fontWeight={920}
             color="gray.600"
+            textAlign="center"
         >
             {children}
         </Heading>
