@@ -1,5 +1,6 @@
 import { Box, Flex } from "@chakra-ui/react";
 import HeaderLayout from "./HeaderLayout";
+import FooterLayout from "./FooterLayout";
 
 export default function Layout({ children }) {
     return (
@@ -7,6 +8,7 @@ export default function Layout({ children }) {
             <Flex minH="100%" p={12} flexDirection="column">
                 <HeaderLayout />
                 {children}
+                <FooterLayout />
             </Flex>
         </Box>
     );
