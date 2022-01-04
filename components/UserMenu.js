@@ -58,7 +58,9 @@ const UserMenu = (props) => {
                     <MenuItem onClick={() => Router.push("/account")}>
                         Account Settings
                     </MenuItem>
-                    <MenuItem onClick={signOut}>Logout</MenuItem>
+                    <MenuItem onClick={() => signOut({ callbackUrl: "/" })}>
+                        Logout
+                    </MenuItem>
                 </MenuList>
             </Menu>
         );
