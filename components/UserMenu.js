@@ -21,7 +21,10 @@ const UserMenu = (props) => {
 
     if (!session) {
         return (
-            <Link href="/api/auth/signin" style={{ textDecoration: "none" }}>
+            <Link
+                onClick={() => Router.push(`/auth/signin`)}
+                style={{ textDecoration: "none" }}
+            >
                 <Button colorScheme="blue" variant="outline">
                     Login
                 </Button>

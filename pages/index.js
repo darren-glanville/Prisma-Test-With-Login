@@ -2,14 +2,15 @@ import {
     Box,
     Button,
     Center,
+    Link,
     LinkBox,
     LinkOverlay,
     SimpleGrid,
     VStack,
 } from "@chakra-ui/react";
-import Header from "../components/Header";
 import SubHeader from "../components/SubHeader";
 
+import Router from "next/router";
 import prisma from "../lib/prisma";
 
 export default function Index(props) {
@@ -23,26 +24,33 @@ export default function Index(props) {
 
                     return (
                         <LinkBox key={index}>
-                            <Box
-                                borderWidth="1px"
-                                borderRadius="lg"
-                                p={8}
-                                h="100%"
+                            <Link
+                                onClick={() => Router.push(`/post/${post.id}`)}
+                                style={{ textDecoration: "none" }}
                             >
-                                <Center h="100%">
-                                    <VStack spacing={4}>
-                                        <LinkOverlay href={`/post/${post.id}`}>
-                                            <SubHeader>{post.title}</SubHeader>
-                                        </LinkOverlay>
-                                        <small>By {authorName}</small>
-                                        <LinkOverlay href={`/post/${post.id}`}>
+                                <Box
+                                    borderWidth="1px"
+                                    borderRadius="lg"
+                                    p={8}
+                                    h="100%"
+                                >
+                                    <Center h="100%">
+                                        <VStack spacing={4}>
+                                            <Link>
+                                                <SubHeader>
+                                                    {post.title}
+                                                </SubHeader>
+                                            </Link>
+
+                                            <small>By {authorName}</small>
+
                                             <Button colorScheme="green">
                                                 Open
                                             </Button>
-                                        </LinkOverlay>
-                                    </VStack>
-                                </Center>
-                            </Box>
+                                        </VStack>
+                                    </Center>
+                                </Box>
+                            </Link>
                         </LinkBox>
                     );
                 })}

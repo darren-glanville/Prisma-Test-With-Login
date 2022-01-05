@@ -3,6 +3,7 @@ import NextDocument, { Html, Head, Main, NextScript } from "next/document";
 
 import theme from "../app/theme";
 export default class Document extends NextDocument {
+    // render page
     render() {
         return (
             <Html lang="en">

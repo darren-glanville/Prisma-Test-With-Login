@@ -7,6 +7,7 @@ import Layout from "../app/layout";
 
 import Auth from "../app/auth";
 import { SessionProvider } from "next-auth/react";
+import cookies from "next-cookies";
 
 function App({ Component, pageProps: { session, ...pageProps } }) {
     return (
@@ -52,4 +53,5 @@ function App({ Component, pageProps: { session, ...pageProps } }) {
         </SessionProvider>
     );
 }
+
 export default App;

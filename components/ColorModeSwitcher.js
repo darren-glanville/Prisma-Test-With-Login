@@ -26,6 +26,7 @@ const ColorModeSwitcher = (props) => {
         </Tooltip>
     );
 
+    // return
     return (
         <Flex align="center">
             <FormLabel htmlFor="change-theme" mb="0">

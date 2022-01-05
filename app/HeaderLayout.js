@@ -1,4 +1,4 @@
-import { Flex, HStack, Icon, Link, Spacer } from "@chakra-ui/react";
+import { Flex, HStack, Spacer } from "@chakra-ui/react";
 import ColorModeSwitcher from "../components/ColorModeSwitcher";
 import UserMenu from "../components/UserMenu";
 

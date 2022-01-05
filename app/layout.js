@@ -17,11 +17,11 @@ export default function Layout({ children, ...props }) {
                         <Loading />
                     </Center>
                 ) : (
-                    <Box>
+                    <>
                         {props?.plain === false ? <HeaderLayout /> : null}
                         {children}
                         <FooterLayout />
-                    </Box>
+                    </>
                 )}
             </Flex>
         </Box>

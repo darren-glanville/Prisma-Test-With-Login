@@ -1,5 +1,5 @@
 import { Box, Button, Link, Text, VStack } from "@chakra-ui/react";
-import Header from "../../components/Header";
+import Router from "next/router";
 import SubHeader from "../../components/SubHeader";
 
 import prisma from "../../lib/prisma";
@@ -11,7 +11,10 @@ export default function Post(props) {
         <VStack spacing={8}>
             <SubHeader>{props.title}</SubHeader>
 
-            <Link href="/" style={{ textDecoration: "none" }}>
+            <Link
+                onClick={() => Router.push("/")}
+                style={{ textDecoration: "none" }}
+            >
                 <Button colorScheme="green">Back</Button>
             </Link>
 
