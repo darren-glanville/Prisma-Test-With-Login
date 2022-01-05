@@ -2,7 +2,11 @@
 
 Test project to create standard login for site with data using Prisma.
 
-**Started on 31st December 2021 (Logged 17 hours so far)**
+**Started on 31st December 2021**
+
+### Live version
+
+A live version of this project can be viewed on [https://prisma-test-with-login.onrender.com](https://prisma-test-with-login.onrender.com)
 
 ## Stack used
 
