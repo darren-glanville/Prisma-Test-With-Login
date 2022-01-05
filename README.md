@@ -17,7 +17,7 @@ Test project to create standard login for site with data using Prisma.
 
 ## Jobs to do
 
-Updated on 3rd January 2022
+Updated on 5rd January 2022
 
 **Account**
 
@@ -27,8 +27,9 @@ Updated on 3rd January 2022
 
 **Auth**
 
--   [ ] Add custom login page
+-   [x] Add custom login page
 -   [ ] Add Google, Facebook, Apple and Email login methods
+-   [ ] Add icons for login methods
 
 **Posts**
 
@@ -40,4 +41,4 @@ Updated on 3rd January 2022
 
 **Hosting**
 
--   [ ] Move to Render to host to the public
+-   [x] Move to Render to host to the public

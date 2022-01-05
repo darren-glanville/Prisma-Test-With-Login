@@ -5,6 +5,7 @@ import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import prisma from "../../../lib/prisma";
 
 export default NextAuth({
+    secret: "dM/xe8jwfoiYUFJBnY+CuIzzxpPNiJBqfYIxVVyhI5k=",
     adapter: PrismaAdapter(prisma),
     providers: [
         GithubProvider({

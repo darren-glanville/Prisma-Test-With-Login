@@ -36,11 +36,7 @@ export default function Index(props) {
                                 >
                                     <Center h="100%">
                                         <VStack spacing={4}>
-                                            <Link>
-                                                <SubHeader>
-                                                    {post.title}
-                                                </SubHeader>
-                                            </Link>
+                                            <SubHeader>{post.title}</SubHeader>
 
                                             <small>By {authorName}</small>
 

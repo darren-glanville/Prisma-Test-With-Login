@@ -2,12 +2,10 @@ import Head from "next/head";
 import { ChakraProvider } from "@chakra-ui/react";
 
 import theme from "../app/theme";
-
 import Layout from "../app/layout";
 
 import Auth from "../app/auth";
 import { SessionProvider } from "next-auth/react";
-import cookies from "next-cookies";
 
 function App({ Component, pageProps: { session, ...pageProps } }) {
     return (
