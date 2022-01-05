@@ -1,4 +1,5 @@
-import { Flex, HStack, Spacer } from "@chakra-ui/react";
+import { Flex, HStack, Spacer, Stack } from "@chakra-ui/react";
+
 import ColorModeSwitcher from "../components/ColorModeSwitcher";
 import UserMenu from "../components/UserMenu";
 
@@ -11,10 +12,15 @@ export default function HeaderLayout(props) {
             <Logo />
             <Spacer />
 
-            <HStack gap={4} mt={{ base: "10", md: "0" }}>
+            <Stack
+                direction={{ base: "column", md: "row" }}
+                align={"center"}
+                gap={4}
+                mt={{ base: "4", md: "0" }}
+            >
                 <ColorModeSwitcher />
                 <UserMenu />
-            </HStack>
+            </Stack>
         </Flex>
     );
 }

@@ -2,7 +2,7 @@
 
 Test project to create standard login for site with data using Prisma.
 
-**Started on 31st December 2021**
+**Started on 31st December 2021 (Logged 17 hours so far)**
 
 ## Stack used
 
@@ -23,13 +23,13 @@ Updated on 5rd January 2022
 
 -   [ ] Add connected accounts
 -   [ ] Edit account info (name, profile photo)
--   [ ] Make user account component full width on mobile
+-   [x] Make user account component full width on mobile
 
 **Auth**
 
 -   [x] Add custom login page
 -   [ ] Add Google, Facebook, Apple and Email login methods
--   [ ] Add icons for login methods
+-   [x] Add icons for login methods
 
 **Posts**
 
