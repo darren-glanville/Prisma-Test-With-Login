@@ -14,10 +14,10 @@ import {
 } from "@chakra-ui/react";
 
 import Router from "next/router";
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession, getSession, signOut } from "next-auth/react";
 
 const UserMenu = (props) => {
-    const { data: session, status } = useSession();
+    const { data: session, loading } = useSession();
 
     if (!session) {
         return (
@@ -68,3 +68,12 @@ const UserMenu = (props) => {
 };
 
 export default UserMenu;
+
+export async function getServerSideProps(context) {
+    return {
+        props: {
+            session: await getSession(context),
+            hello: "World",
+        },
+    };
+}

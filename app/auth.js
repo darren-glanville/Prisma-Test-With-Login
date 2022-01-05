@@ -32,15 +32,6 @@ const Auth = ({ children, role }) => {
         }
     }, [loading, hasUser]);
 
-    // loading
-    if (loading || !hasUser || !hasAccess()) {
-        return (
-            <Center flex="1" my={8} textAlign="center">
-                <Loading />
-            </Center>
-        );
-    }
-
     // return
     if (hasAccess()) return children;
 };
