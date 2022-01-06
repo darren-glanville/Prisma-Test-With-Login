@@ -9,6 +9,7 @@ export default function Layout({ children, ...props }) {
     const { data: session, status } = useSession();
     const loading = status === "loading" ? true : false;
 
+    // render
     return (
         <Box height="100vh">
             <Flex minH="100%" p={12} flexDirection="column">

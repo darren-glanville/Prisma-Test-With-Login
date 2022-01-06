@@ -21,10 +21,6 @@ const theme = extendTheme({
         useSystemColorMode: false,
     },
 
-    shadows: {
-        outline: "0 0 0 3px var(--chakra-colors-gray-900)",
-    },
-
     components: {
         Button,
     },

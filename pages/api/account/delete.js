@@ -11,7 +11,6 @@ export default async (req, res) => {
         });
 
     // Check logged in
-    console.log(session);
     if (!!session?.user === false)
         return res.status(401).json({
             message: "Only supported if logged in",
@@ -25,6 +24,6 @@ export default async (req, res) => {
             },
         });
 
-        return res.status(200).json({ message: "Account deleted" });
+        return res.status(200).json({ message: deleteUser });
     }
 };
