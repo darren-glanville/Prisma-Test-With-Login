@@ -56,3 +56,8 @@ Updated on 6th January 2022
 **Hosting**
 
 -   [x] Move to Render to host to the public
+
+**Other**
+
+-   [ ] Add TypeScript and convert files
+-   [ ] Add ESLint
