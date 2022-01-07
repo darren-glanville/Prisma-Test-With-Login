@@ -4,7 +4,7 @@ const SubHeader = ({ props, children }) => {
     return (
         <Heading
             fontSize={{
-                base: "1xl",
+                base: "2xl",
                 sm: "2xl",
                 md: "3xl",
             }}

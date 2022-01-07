@@ -14,6 +14,7 @@ import {
     FormErrorMessage,
     Input,
     Text,
+    useBreakpointValue,
 } from "@chakra-ui/react";
 import { useRef, useState } from "react";
 
@@ -68,10 +69,16 @@ const DeleteAccount = (props) => {
         },
     });
 
+    const fullWidthButton = useBreakpointValue({ base: true, md: false });
+
     // Component
     return (
         <Box {...props}>
-            <Button colorScheme="red" onClick={() => setIsOpen(true)}>
+            <Button
+                colorScheme="red"
+                onClick={() => setIsOpen(true)}
+                isFullWidth={fullWidthButton}
+            >
                 Delete Account
             </Button>
 

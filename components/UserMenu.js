@@ -30,7 +30,7 @@ const UserMenu = (props) => {
                 style={{ textDecoration: "none" }}
             >
                 <Button colorScheme="blue" variant="outline">
-                    Login
+                    Sign in
                 </Button>
             </Link>
         );

@@ -16,7 +16,7 @@ export default function HeaderLayout(props) {
                 direction={{ base: "column", md: "row" }}
                 align={"center"}
                 gap={4}
-                mt={{ base: "4", md: "0" }}
+                my={{ base: "4", md: "0" }}
             >
                 <ColorModeSwitcher />
                 <UserMenu />

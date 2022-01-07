@@ -12,12 +12,16 @@ const Auth = ({ children, role }) => {
     const loading = status === "loading" ? true : false;
 
     const hasUser = !!session?.user;
-
+    console.log(role);
     const hasAccess = () => {
-        if (!role) {
-            return true; // no role to general has access
+        if (hasUser) {
+            if (!role) {
+                return true; // no role to general has access
+            } else {
+                return session.user.role === role.toUpperCase() ? true : false;
+            }
         } else {
-            return session.user.role === role.toUpperCase() ? true : false;
+            return false; // not ligged in
         }
     };
 
@@ -25,14 +29,14 @@ const Auth = ({ children, role }) => {
     useEffect(() => {
         if (!loading) {
             if (!hasUser) {
-                router.push("/api/auth/signin"); // redirect to login page
+                router.push("/auth/signin"); // redirect to login page
             } else if (!hasAccess()) {
-                router.push("/403");
+                //router.push("/403");
             }
         }
     }, [loading, hasUser]);
 
-    if (loading) {
+    if (loading || !hasAccess()) {
         return (
             <Center flex="1" my={8} textAlign="center">
                 <Loading />
