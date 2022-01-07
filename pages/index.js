@@ -61,7 +61,7 @@ export default function Index(props) {
     );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     // posts
     const posts = await prisma.post.findMany({
         where: { published: true },
@@ -69,6 +69,9 @@ export async function getStaticProps() {
             author: {
                 select: { name: true },
             },
+        },
+        orderBy: {
+            id: "desc",
         },
     });
 

@@ -12,7 +12,7 @@ const Auth = ({ children, role }) => {
     const loading = status === "loading" ? true : false;
 
     const hasUser = !!session?.user;
-    console.log(role);
+
     const hasAccess = () => {
         if (hasUser) {
             if (!role) {

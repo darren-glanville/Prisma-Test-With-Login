@@ -50,7 +50,7 @@ Updated on 6th January 2022
 -   [x] Create post
 -   [ ] Edit post (content and public status)
 -   [ ] Delete post
--   [ ] Add My Posts to User Menu (show in table)
+-   [x] Add posts in My Account
 -   [ ] Add pagination to Homepage
 
 **Hosting**
