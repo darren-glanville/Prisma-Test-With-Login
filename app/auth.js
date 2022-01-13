@@ -4,6 +4,7 @@ import Loading from "../components/Loading";
 import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
 import { useEffect } from "react";
+import LoadingFullPage from "../components/LoadingFullPage";
 
 const Auth = ({ children, role }) => {
     const router = useRouter();
@@ -37,11 +38,7 @@ const Auth = ({ children, role }) => {
     }, [loading, hasUser]);
 
     if (loading || !hasAccess()) {
-        return (
-            <Center flex="1" my={8} textAlign="center">
-                <Loading />
-            </Center>
-        );
+        return <LoadingFullPage />;
     }
 
     // return

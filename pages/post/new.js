@@ -38,7 +38,7 @@ const NewPage = (props) => {
             if (formLocked === false) {
                 setFormLocked(true);
 
-                fetch("/api/post", {
+                fetch("/api/post/create", {
                     body: JSON.stringify({
                         values,
                     }),
@@ -49,8 +49,6 @@ const NewPage = (props) => {
                 })
                     .then((response) => response.json())
                     .then((data) => {
-                        console.log(data);
-
                         toast({
                             title: "Post created.",
                             description: "We've created your new post for you.",
